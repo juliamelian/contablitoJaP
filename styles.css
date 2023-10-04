@@ -1,82 +1,242 @@
- /* Estilos para pantallas grandes */
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(194, 177, 109);
-    color: whitesmoke;
-    justify-content: center;
+
+ :root{
+    --color-principal:rgb(255, 0, 0);
+    --color-1:rgb(41, 41, 41);
+    --color-2: #ebebeb;
+    --fuente-1: 'IBM Plex Mono', monospace;
 }
 
-h1, h2{
+/* variables de colores y fuentes */
+
+*{
+    margin:0;
+    padding: 0;
+}
+/* formatear pagina */
+
+
+
+
+/* comienzo de header */
+
+header{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-2);
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
+    
+}
+header h1{
+    color: var(--color-1);
+    font-family: var(--fuente-1);
+    font-size: 40px;
+}
+header p{
+    color: var(--color-principal);
+    font-family: var(--fuente-1);
+    font-size: 20px;
+}
+
+/* fin header*/
+
+/* propuesta */
+
+#propuesta{
+    width: 700px;
+    position: relative;
+    left: 150px; 
+    padding: 20px;
+    margin-top: 50px;
+    border:2px solid var(--color-principal);
+    color: var(--color-principal);
+    background-color: var(--color-2);
+    border-radius: 20px;
+}
+#propuesta h2, .requisitos{
     display: flex;
     justify-content: center;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px 20px 20px 20px;
-    border: 2px solid rgb(178, 171, 111);
-    border-radius: 5px;
-    background-color: rgb(79, 121, 175);
-    color: whitesmoke;
+#propuesta ul{
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
 }
 
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* fin de propuesta */
+
+
+
+/* formularios */
+.formularios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+
+  
+  #product-registration label,
+  #product-movement label,
+  .input-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
+  }
+  
+
+  
+/* formularios */
+
+#product-registration{
+    height: 600px;
+    border: 1px solid var(--color-principal);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
-input[type="date"] {
-    width: calc(100% - 20px);
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#product-registration h2{
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+#product-registration label{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+}
+#product-registration input{
+   margin-left: 35px;
+   height: 30px;
+   width: 200px;
+   border-radius: 11px;
+   border: 1px solid var(--color-principal);
+   outline: none;
+   padding: 5px 5px 5px 5px;
+}
+
+
+#product-registration button{
+    width: 200px;
+    height: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    transition: .3s;
+    color: var(--color-principal);
+}
+#product-registration button:hover{
+    transform: translateY(-10px);
+    background-color: var(--color-principal);
+    transition: .3s;
+    color: var(--color-2);
     cursor: pointer;
 }
 
-/* Media query para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-    form {
-        padding: 10px;
-    }
 
-    input[type="text"],
-    input[type="number"] {
-        font-size: 14px;
-        padding: 6px;
-    }
 
-    input[type="date"] {
-        width: calc(100% - 12px);
-        padding: 6px;
-        font-size: 14px;
-    }
 
-    input[type="submit"] {
-        padding: 8px 16px;
 
-    }
+
+/* product - registration*/
+
+
+#product-movement{
+    height: 1100px;
+    width: 350px;
+    border: 1px solid var(--color-principal);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+#product-movement h2{
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
+    
+}
+#product-movement h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
 }
 
-
-
-footer {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 0; 
+#product-movement label{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 18px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
 }
+.input-radio{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+     accent-color: var(--color-principal);
+}
+.input-radio input[type="radio"]{
+    margin-left: 20px ;
+    padding-top: 10px;
+}
+#product-movement input[type="text"],input[type="date"], input[type="number"]{
+    margin-left: 70px;
+    margin-top: 20px;
+    height: 30px;
+    width: 200px;
+    border-radius: 11px;
+    border: 1px solid var(--color-principal);
+    outline: none;
+    padding: 5px 5px 5px 5px;
+ }
+ #product-movement button{
+    width: 200px;
+    height: 40px;
+    margin-left:  76px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    transition: .3s;
+    color: var(--color-principal);
+}
+#product-movement button:hover{
+
+    transform: translateY(-10px);
+    background-color: var(--color-principal);
+    transition: .3s;
+    color: var(--color-2);
+    cursor: pointer;
+}
+
+/**/
+

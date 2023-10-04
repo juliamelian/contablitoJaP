@@ -10,12 +10,13 @@
 
 <body>
     <header>
-        <h1>Contablito - Control de Stock</h1>
+        <h1>Control de Stock</h1>
+        <p>Contablito</p>
     </header>
     <section id="propuesta">
         <h2>Trabajo para la empresa Barraca Ladrillos SRL</h1>
             <h2>Software de control de stock</h2>
-            <h3>Requisitos:</h3>
+            <h3 class="requisitos">Requisitos:</h3>
             <ul>
                 <li>Registro de productos con los campos id, nombre, descripción, cantidad de stock, costo del producto
                 </li>
@@ -37,16 +38,16 @@
             </ul>
     </section>
 
-
+<div class="formularios">
     <form id="product-registration">
         <h2>Registro de productos</h2>
-        <div>ID: <input type="text" id="registration-form-id" placeholder="ID del producto" required></div>
-        <div>Nombre: <input type="text" id="registration-form-name" placeholder="Nombre del producto" required></div>
-        <div>Descripción: <input type="text" id="registration-form-description" placeholder="Descripción del producto"
+        <div><label>ID</label> <input type="text" id="registration-form-id" placeholder="ID del producto" required></div>
+        <div><label>Nombre</label> <input type="text" id="registration-form-name" placeholder="Nombre del producto" required></div>
+        <div><label>Descripción</label> <input type="text" id="registration-form-description" placeholder="Descripción del producto"
                 required></div>
-        <div>Cantidad: <input type="number" id="registration-form-quantity" placeholder="Cantidad del producto"
+        <div><label>Cantidad</label> <input type="number" id="registration-form-quantity" placeholder="Cantidad del producto"
                 required></div>
-        <div>Costo: <input type="number" id="registration-form-cost" placeholder="Costo del producto" required></div>
+        <div><label>Costo</label> <input type="number" id="registration-form-cost" placeholder="Costo del producto" required></div>
         <br>
         <div><button type="submit" form="product-registration" value="Submit">Enviar</button></div>
     </form>
@@ -55,13 +56,13 @@
         <h2>Registro de movimientos</h2>
         <div>
             <h3>Tipo de transacción</h3>
-            <div>
+            <div class="input-radio">
                 <input id="compra" type="radio" name="input-tipo-transaccion" value="compra">
-                <label for="compra">Compra</label>
-            </div>
-            <div>
+                <label for="compra"> Compra</label>
+            
+            
                 <input id="venta" type="radio" name="input-tipo-transaccion" value="venta">
-                <label for="venta">Venta</label>
+                <label for="venta"> Venta</label>
             </div>
         </div>
         <div>
@@ -83,27 +84,27 @@
             </div>
             <div>
                 <h3>Subtotal</h3>
-                <p>-Número calculado y colocado por JS-</p><!--Número calculado y colocado por JS-->
+                <!-- <p>Número calculado y colocado por JS-</p><!--Número calculado y colocado por JS-->
             </div>
             <div>
                 <h3>IVA</h3>
-                <div>
+                <div class="input-radio">
                     <input id="sin-iva" type="radio" name="input-tipo-iva" value="sin-iva">
                     <label for="sin-iva">Sin IVA</label>
-                </div>
-                <div>
+               
+            
                     <input id="iva-minimo" type="radio" name="input-tipo-iva" value="iva-minimo">
                     <label for="iva-minimo">IVA Mínimo (10%)</label>
-                </div>
-                <div>
+            
+          
                     <input id="iva-basico" type="radio" name="input-tipo-iva" value="iva-basico">
                     <label for="iva-basico">IVA Básico (22%)</label>
                 </div>
-                <p>-Valor del IVA calculado y colocado por JS-</p>
+                <!-- <p>-Valor del IVA calculado y colocado por JS-</p> -->
             </div>
             <div>
                 <h3>Total</h3> <!-- suma de subtotales * iva-->
-                <p>-Número calculado y colocado por JS-</p>
+                <!-- <p>Número calculado y colocado por JS-</p> -->
             </div>
         </div>
         <div>
@@ -111,7 +112,7 @@
             <button type="submit" form="product-movement" value="Submit">Enviar</button>
         </div>
     </form>
-
+</div>
     <div id="product-container">
         <div><p>Prodcto1 - Cantidad</p></div>
         <div><p>Prodcto2 - Cantidad</p></div>
