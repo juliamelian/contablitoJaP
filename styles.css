@@ -14,7 +14,9 @@
 }
 /* formatear pagina */
 
-
+body{
+    max-height: 1500px;
+}
 
 
 /* comienzo de header */
@@ -99,7 +101,9 @@ header p{
 /* formularios */
 
 #product-registration{
-    height: 600px;
+    position: relative;
+    bottom: 325px;
+    height: 500px;
     border: 1px solid var(--color-principal);
     border-radius: 20px;
     margin: 40px;
@@ -110,7 +114,7 @@ header p{
 
 #product-registration h2{
     display: flex;
-    justify-content: center;
+    margin: auto;
     font-family: var(--fuente-1);
     color: var(--color-principal);
 }
@@ -118,7 +122,7 @@ header p{
 #product-registration label{
     
     display: flex;
-    justify-content: center;
+    margin: auto;
     flex-direction: row;
     padding: 10px;
     font-size: 19px;
@@ -126,7 +130,8 @@ header p{
      color: var(--color-principal);
 }
 #product-registration input{
-   margin-left: 35px;
+   display: flex;
+margin: auto;
    height: 30px;
    width: 200px;
    border-radius: 11px;
@@ -135,7 +140,9 @@ header p{
    padding: 5px 5px 5px 5px;
 }
 
-
+#product-registration input[type="number"]{
+    margin-top: -5px;
+}
 #product-registration button{
     width: 200px;
     height: 40px;
@@ -163,7 +170,13 @@ header p{
 
 
 #product-movement{
-    height: 1100px;
+    height: 1150px;
+    
+   padding-right:10px;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
     width: 350px;
     border: 1px solid var(--color-principal);
     border-radius: 20px;
@@ -174,7 +187,10 @@ header p{
 }
 #product-movement h2{
     display: flex;
-    justify-content: center;
+    margin: auto;
+  font-size: 27px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
     font-family: var(--fuente-1);
     color: var(--color-principal);
     
@@ -189,17 +205,20 @@ header p{
 
 #product-movement label{
     display: flex;
-    justify-content: center;
+    margin: auto;
     flex-direction: row;
-    padding: 10px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 19px;
     font-family: var(--fuente-1);
      color: var(--color-principal);
 }
 .input-radio{
     display: flex;
-    justify-content: center;
-    padding: 10px;
+    margin: auto;
+    margin-left:15px ;
+    margin-top: 20px;
+    border-top: 1px solid var(--color-principal);
+    border-bottom: 1px solid var(--color-principal);
     font-family: var(--fuente-1);
      color: var(--color-principal);
      accent-color: var(--color-principal);
@@ -209,8 +228,8 @@ header p{
     padding-top: 10px;
 }
 #product-movement input[type="text"],input[type="date"], input[type="number"]{
-    margin-left: 70px;
-    margin-top: 20px;
+    display: flex;
+margin: auto;
     height: 30px;
     width: 200px;
     border-radius: 11px;
@@ -222,7 +241,7 @@ header p{
     width: 200px;
     height: 40px;
     margin-left:  76px;
-    margin-top: 30px;
+    margin-top: 50px;
     border-radius: 10px;
     border: 1px solid var(--color-principal);
     background-color: transparent;
@@ -238,5 +257,37 @@ header p{
     cursor: pointer;
 }
 
-/**/
+/* product-container */
 
+#product-container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    width: 200px;
+    height: 300px;
+    position: relative;
+    left: 150px;
+    bottom: 650px;
+    border: 1px solid var(--color-principal);
+   border-radius: 30px;
+}
+
+#product-container p{
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    color: var(--color-principal);
+    
+}
+
+/*product container*/
+
+/*footer*/
+footer{
+    position: relative;
+bottom:300px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30px;
+background-color: var(--color-2);
+color: var(--color-1);
+}
