@@ -1,5 +1,5 @@
  /* Estilos para pantallas grandes */
-body {
+ body {
     font-family: Arial, sans-serif;
     background-color: rgb(194, 177, 109);
     color: whitesmoke;
@@ -9,6 +9,15 @@ body {
 h1, h2{
     display: flex;
     justify-content: center;
+}
+#product-container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid rgb(178, 171, 111);
+    border-radius: 5px;
+    background-color: rgb(79, 121, 175);
+    color: whitesmoke;
 }
 
 form {
