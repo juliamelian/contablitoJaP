@@ -1,12 +1,64 @@
- /* Estilos para pantallas grandes */
- body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(194, 177, 109);
-    color: whitesmoke;
-    justify-content: center;
+
+ :root{
+    --color-principal:rgb(255, 0, 0);
+    --color-1:rgb(41, 41, 41);
+    --color-2: #ebebeb;
+    --fuente-1: 'IBM Plex Mono', monospace;
 }
 
-h1, h2{
+/* variables de colores y fuentes */
+
+*{
+    margin:0;
+    padding: 0;
+}
+/* formatear pagina */
+
+body{
+    min-height: 100vh
+}
+
+
+/* comienzo de header */
+
+header{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-2);
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
+    
+}
+header h1{
+    color: var(--color-1);
+    font-family: var(--fuente-1);
+    font-size: 40px;
+}
+header p{
+    color: var(--color-principal);
+    font-family: var(--fuente-1);
+    font-size: 20px;
+}
+
+/* fin header*/
+
+/* propuesta */
+
+#propuesta{
+    width: 700px;
+  
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border:2px solid var(--color-principal);
+    color: var(--color-principal);
+    background-color: var(--color-2);
+    border-radius: 20px;
+}
+#propuesta h2, .requisitos{
     display: flex;
     justify-content: center;
 }
@@ -20,72 +72,338 @@ h1, h2{
     color: whitesmoke;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px 20px 20px 20px;
-    border: 2px solid rgb(178, 171, 111);
-    border-radius: 5px;
-    background-color: rgb(79, 121, 175);
-    color: whitesmoke;
+#propuesta ul{
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
 }
 
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* fin de propuesta */
+
+
+
+/* formularios */
+.formularios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+
+  
+  #product-registration label,
+  #product-movement label,
+  .input-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
+  }
+  
+
+  
+/* formularios */
+
+#product-registration{
+    position: relative;
+    bottom: 325px;
+    height: 500px;
+    border: 1px solid var(--color-principal);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
-input[type="date"] {
-    width: calc(100% - 20px);
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#product-registration h2{
+    display: flex;
+    margin: auto;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+#product-registration label{
+    
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+}
+#product-registration input{
+   display: flex;
+margin: auto;
+   height: 30px;
+   width: 200px;
+   border-radius: 11px;
+   border: 1px solid var(--color-principal);
+   outline: none;
+   padding: 5px 5px 5px 5px;
+}
+
+#product-registration input[type="number"]{
+    margin-top: -5px;
+}
+#product-registration button{
+    width: 200px;
+    height: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    transition: .3s;
+    color: var(--color-principal);
+}
+#product-registration button:hover{
+    transform: translateY(-10px);
+    background-color: var(--color-principal);
+    transition: .3s;
+    color: var(--color-2);
     cursor: pointer;
 }
 
-/* Media query para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-    form {
-        padding: 10px;
-    }
 
-    input[type="text"],
-    input[type="number"] {
-        font-size: 14px;
-        padding: 6px;
-    }
 
-    input[type="date"] {
-        width: calc(100% - 12px);
-        padding: 6px;
-        font-size: 14px;
-    }
 
-    input[type="submit"] {
-        padding: 8px 16px;
 
-    }
+
+/* product - registration*/
+
+
+#product-movement{
+    height: 1150px;
+    
+   padding-right:10px;
+    padding: 10px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+    width: 350px;
+    border: 1px solid var(--color-principal);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+#product-movement h2{
+    display: flex;
+    margin: auto;
+  font-size: 27px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
+    
+}
+#product-movement h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: var(--fuente-1);
+    color: var(--color-principal);
 }
 
+#product-movement label{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 19px;
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+}
+.input-radio{
+    display: flex;
+    margin: auto;
+    margin-left:15px ;
+    margin-top: 20px;
+    border-top: 1px solid var(--color-principal);
+    border-bottom: 1px solid var(--color-principal);
+    font-family: var(--fuente-1);
+     color: var(--color-principal);
+     accent-color: var(--color-principal);
+}
+.input-radio input[type="radio"]{
+    margin-left: 20px ;
+    padding-top: 10px;
+}
+#product-movement input[type="text"],input[type="date"], input[type="number"]{
+    display: flex;
+margin: auto;
+    height: 30px;
+    width: 200px;
+    border-radius: 11px;
+    border: 1px solid var(--color-principal);
+    outline: none;
+    padding: 5px 5px 5px 5px;
+ }
+ #product-movement button{
+    width: 200px;
+    height: 40px;
+    margin-left:  76px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    transition: .3s;
+    color: var(--color-principal);
+}
+#product-movement button:hover{
 
+    transform: translateY(-10px);
+    background-color: var(--color-principal);
+    transition: .3s;
+    color: var(--color-2);
+    cursor: pointer;
+}
 
-footer {
+/* product-container */
+
+#product-container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    width: 200px;
+    height: 300px;
+    position: relative;
+    left: 150px;
+    bottom: 650px;
+    border: 1px solid var(--color-principal);
+   border-radius: 30px;
+}
+
+#product-container p{
     text-align: center;
-    font-weight: bold;
-    padding: 10px 0; 
+    padding: 20px 20px 20px 20px;
+    color: var(--color-principal);
+    
 }
+
+/*product container*/
+
+/*footer*/
+footer{
+    position: relative;
+
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+background-color: var(--color-2);
+color: var(--color-1);
+}
+
+
+/* responsibe desing */
+/* Establece el tamaño de fuente base en función del tamaño de la pantalla */
+html {
+    font-size: 16px; /* Cambia esto según tus preferencias */
+  }
+  
+  /* Utiliza media queries para aplicar estilos específicos para diferentes tamaños de pantalla */
+  
+  /* Para pantallas pequeñas (por ejemplo, teléfonos) */
+  @media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+      font-size: 14px; /* Reduce el tamaño de fuente para pantallas más pequeñas */
+    }
+  
+    header {
+      height: 80px;
+      width: 100%;
+      margin-bottom: 50px;
+      font-size: 19px;
+    }
+    #propuesta {
+        width: 300px;
+        position: relative;
+        left: 0px; 
+        margin: auto;
+        padding: 20px;
+        font-size: 12px;
+        margin-top: 50px;
+        border:1px solid var(--color-principal);
+        color: var(--color-principal);
+        background-color: var(--color-2);
+        border-radius: 20px;
+    }
+    .formularios{
+display: block;
+    }
+    #product-registration{
+        top: 50px;
+        height: 580px;
+    }
+    #product-registration h2{
+    font-size: 20px;
+    }
+    #product-registration label{
+        margin-top: 20px;
+ font-size: 15px;
+    }
+    #product-registration button{
+        position: relative;
+        right: 24px;
+    }
+
+  #product-container{
+    left: 0;
+    bottom: 1100px;
+  margin: auto;
+  width: 300px;
+  } 
+
+
+   #product-movement{
+    width: 232px;
+    height: 1050px;
+    position: relative;
+    top: 400px;
+  }
+  #product-movement h2{
+    font-size: 18px;
+  }
+  #product-movement h3{
+    font-size: 16px;
+  }
+  .input-radio{
+    width: 200px;
+    position: relative;
+    right: 10px;
+    
+  }
+  /* Estilo para los inputs de tipo radio dentro del contenedor .input-radio */
+  .input-radio input[type="radio"]{
+    padding: 10px;
+  }
+  .input-radio label{
+    width: 20px;
+    transform: scale(0.8);
+    }
+
+    #product-movement button{
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  footer{
+    width: 100%;
+    height: 40px;
+top: 100px;
+  }
+    /* Ajustes de estilo adicionales para pantallas pequeñas */
+  }
+  
+  /* Footer */
+
+  
