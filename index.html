@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
     <title>Contablito - Control de Stock</title>
 </head>
 
 <body>
+
     <header>
         <h1>Control de Stock</h1>
         <p>Contablito</p>
@@ -21,15 +23,15 @@
                 <li>Registro de productos con los campos id, nombre, descripción, cantidad de stock, costo del producto
                 </li>
                 <li>Registro de movimientos:
-                        tipo de transacción (compra / venta),
-                        fecha dela transacción,
-                        producto,
-                        cantidad del producto (comprado o vendido),
-                        costo
-                        unitario del producto (comprado o vendido),
-                        subtotal,
-                        IVA,
-                        Total
+                    tipo de transacción (compra / venta),
+                    fecha dela transacción,
+                    producto,
+                    cantidad del producto (comprado o vendido),
+                    costo
+                    unitario del producto (comprado o vendido),
+                    subtotal,
+                    IVA,
+                    Total
                 </li>
                 <li>Los datos ingresados deben ser consistentes</li> <!-- con JS-->
                 <li>El programa debe mostrar alertas de productos
@@ -51,6 +53,13 @@
         <br>
         <div><button type="submit" form="product-registration" value="Submit">Enviar</button></div>
     </form>
+
+    <div id="product-container">
+        <h3>Productos en Stock:</h3>
+        <ul id="product-list">
+            <!-- Los productos agregados se mostrarán aquí -->
+        </ul>
+    </div>
 
     <form id="product-movement">
         <h2>Registro de movimientos</h2>
@@ -85,6 +94,7 @@
             <div>
                 <h3>Subtotal</h3>
                 <!-- <p>Número calculado y colocado por JS-</p><!--Número calculado y colocado por JS-->
+                <p id="subtotal">-Número calculado y colocado por JS-</p><!--Número calculado y colocado por JS-->
             </div>
             <div>
                 <h3>IVA</h3>
@@ -100,11 +110,11 @@
                     <input id="iva-basico" type="radio" name="input-tipo-iva" value="iva-basico">
                     <label for="iva-basico">IVA Básico (22%)</label>
                 </div>
-                <!-- <p>-Valor del IVA calculado y colocado por JS-</p> -->
+                <p id="valor-iva">-Valor del IVA calculado y colocado por JS-</p>
             </div>
             <div>
                 <h3>Total</h3> <!-- suma de subtotales * iva-->
-                <!-- <p>Número calculado y colocado por JS-</p> -->
+                <p id="total">-Número calculado y colocado por JS-</p>
             </div>
         </div>
         <div>
@@ -125,6 +135,8 @@
         <p>Todos los derechos reservados Team 5 you know</p>
     </footer>
 
+
+    <p>Todos los derechos reservados Team 5 you know</p>
 </body>
 
 </html>
