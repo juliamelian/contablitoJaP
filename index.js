@@ -42,6 +42,7 @@ function agregarAlListado() {
     document.getElementById('registration-form-quantity').value = '';
     document.getElementById('registration-form-cost').value = '';
 }
+
 // Función para agregar movimientos a la tabla y al registro de movimientos
 function agregarMovimiento() {
     const tipoTransaccion = document.querySelector('input[name="input-tipo-transaccion"]:checked').value;
@@ -80,17 +81,16 @@ function agregarMovimiento() {
         const tableRows = document.getElementById('product-table-body').getElementsByTagName('tr');
         for (let i = 0; i < tableRows.length; i++) {
             const row = tableRows[i];
-            const idCell = row.cells[0];
+            const nombreCell = row.cells[1];
             const quantityCell = row.cells[3];
 
-            if (idCell.textContent === producto.id) {
+            if (nombreCell.textContent === producto.nombre) {
                 const newQuantity = producto.cantidad;
                 quantityCell.textContent = newQuantity;
                 break;
             }
         }
     }
-
     // Crear una nueva fila de tabla <tr> para mostrar el movimiento
     const tableRow = document.createElement('tr');
     tableRow.innerHTML = `
@@ -131,8 +131,6 @@ function agregarMovimiento() {
     document.getElementById('total').innerText = '';
 }
 
-
-
 // Función para calcular el subtotal
 function calcularSubtotal() {
     const cantidad = parseFloat(document.getElementById('movement-form-quantity').value);
@@ -159,6 +157,7 @@ function calcularIVA() {
 
     document.getElementById('valor-iva').innerText = valorIVA.toFixed(2);
 }
+
 // Función para calcular el IVA
 function calcularIVA2() {
     const sinIVA = document.getElementById('sin-iva').checked;
@@ -177,6 +176,7 @@ function calcularIVA2() {
 
     return { valorIVA };
 }
+
 // Función para calcular el total
 function calcularTotal() {
     const subtotal = parseFloat(document.getElementById('subtotal').innerText);
