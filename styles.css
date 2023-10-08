@@ -29,8 +29,6 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--color-2);
-  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
-
 }
 
 header h1 {
@@ -448,11 +446,49 @@ td {
   background-color: var(--color-2);
   color: var(--color-1);
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
-
-}
-
-.table-header h1 {
-  color: var(--color-1);
   font-family: var(--fuente-1);
-  font-size: 40px;
+  font-size: 1.4rem;
+  font-weight: 550;
+
 }
+
+
+
+/*navbar */
+.navbar  {
+  position: sticky;
+  top: 0; /* La posición en la que se volverá "sticky" (en la parte superior) */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;;
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.64);
+}
+
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  color: var(--color-principal);
+  text-decoration: none;
+  font-weight: 550;
+  
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+

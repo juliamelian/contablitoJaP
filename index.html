@@ -15,6 +15,19 @@
         <h1>Control de Stock</h1>
         <p>Contablito</p>
     </header>
+
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a href="#product-registration">Agregar producto</a></li>
+            <li class="separador">|</li>
+            <li><a href="#product-movement">Comprar / Vender</a></li>
+            <li class="separador">|</li>
+            <li><a href="#tabla-stock">Stock</a></li>
+            <li class="separador">|</li>
+            <li><a href="#tabla-movs">Movimientos</a></li>
+        </ul>
+    </nav>
+
     <section id="propuesta">
         <h2>Trabajo para la empresa Barraca Ladrillos SRL</h1>
             <h2>Software de control de stock</h2>
@@ -116,7 +129,7 @@
     </form>
 </div>
     <div id="product-container">
-        <table>
+        <table id="tabla-stock">
             <thead>
                 <tr><h1 class="table-header">Productos en Stock</h1></tr>
                 <tr>
@@ -150,7 +163,7 @@
         </table>
     </div>
     <div id="product-container">
-        <table>
+        <table id="tabla-movs">
             <thead>
                 <tr><h1 class="table-header">Registro de Movimientos</h1></tr>
                 <tr>
