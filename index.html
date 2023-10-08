@@ -49,7 +49,7 @@
                 required></div>
         <div><label>Cantidad</label> <input type="number" id="registration-form-quantity" placeholder="Cantidad del producto"
                 required></div>
-        <div><label>Costo</label> <input type="number" id="registration-form-cost" placeholder="Costo del producto" required></div>
+        <div><label>Costo Unitario</label> <input type="number" id="registration-form-cost" placeholder="Costo del producto" required></div>
         <br>
         <div><button type="submit" form="product-registration" value="Submit">Enviar</button></div>
     </form>
@@ -118,6 +118,7 @@
     <div id="product-container">
         <table>
             <thead>
+                <tr><h1 class="table-header">Productos en Stock</h1></tr>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -135,6 +136,7 @@
     <div id="product-container">
         <table>
             <thead>
+                <tr><h1 class="table-header">Registro de Movimientos</h1></tr>
                 <tr>
                     <th>Tipo</th>
                     <th>Fecha</th>

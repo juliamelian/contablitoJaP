@@ -18,7 +18,7 @@ function agregarAlListado() {
         <td>${descripcion}</td>
         <td>${cantidad}</td>
         <td>${costoUnitario}</td>
-        <td>${cantidad}</td> <!-- Aquí se muestra la cantidad en stock -->
+        
     `;
 
     // Agregar la nueva fila de tabla a la tabla
@@ -52,7 +52,7 @@ function agregarMovimiento() {
     const costoUnitario = parseFloat(document.getElementById('movement-form-cost').value);
 
     // Buscar el producto en el registro de productos por su nombre
-    const producto = productos.find((p) => p.nombre === productoNombre);
+    const producto = productos.find((p) => p.nombre == productoNombre);
 
     if (!producto) {
         alert('El producto no existe en el registro.');
@@ -70,15 +70,28 @@ function agregarMovimiento() {
 
     // Calcular el subtotal
     const subtotal = cantidad * costoUnitario;
+    const tableRows = document.getElementById('product-table-body').getElementsByTagName('tr');
 
     // Actualizar la cantidad en stock del producto
     if (tipoTransaccion === 'compra') {
         producto.cantidad += cantidad;
+
+         // Actualizar la cantidad en la tabla de productos
+         for (let i = 0; i < tableRows.length; i++) {
+            const row = tableRows[i];
+            const nombreCell = row.cells[1];
+            const quantityCell = row.cells[3];
+
+            if (nombreCell.textContent === producto.nombre) {
+                const newQuantity = producto.cantidad;
+                quantityCell.textContent = newQuantity;
+                break;
+            }
+        }
     } else if (tipoTransaccion === 'venta') {
         producto.cantidad -= cantidad;
 
         // Actualizar la cantidad en la tabla de productos
-        const tableRows = document.getElementById('product-table-body').getElementsByTagName('tr');
         for (let i = 0; i < tableRows.length; i++) {
             const row = tableRows[i];
             const nombreCell = row.cells[1];
@@ -205,9 +218,23 @@ document.querySelectorAll('input[name="input-tipo-iva"]').forEach((radio) => {
     radio.addEventListener('change', calcularIVA);
 });
 
-// Agregar evento para calcular el total cuando cambie el subtotal o el valor del IVA
-document.getElementById('subtotal').addEventListener('DOMSubtreeModified', calcularTotal);
-document.getElementById('valor-iva').addEventListener('DOMSubtreeModified', calcularTotal);
+// Crear una función de devolución de llamada para el observador de mutación
+function handleDOMChanges(mutationsList, observer) {
+    // Llamar a la función calcularTotal cuando se detecten cambios en el DOM
+    calcularTotal();
+}
+// Crear un observador de mutación para el elemento con ID 'subtotal'
+const subtotalObserver = new MutationObserver(handleDOMChanges);
+
+// Configurar el observador para observar cambios en el contenido del elemento
+subtotalObserver.observe(document.getElementById('subtotal'), { childList: true });
+
+// Crear un observador de mutación para el elemento con ID 'valor-iva'
+const valorIvaObserver = new MutationObserver(handleDOMChanges);
+
+// Configurar el observador para observar cambios en el contenido del elemento
+valorIvaObserver.observe(document.getElementById('valor-iva'), { childList: true });
+
 
 // Función para verificar el stock y mostrar alertas de bajo stock
 function verificarStock() {

@@ -1,72 +1,76 @@
-
- :root{
-    --color-principal:rgb(127, 28, 213);
-    --color-1:rgb(41, 41, 41);
-    --color-2: #ebebeb;
-    --fuente-1: 'IBM Plex Mono', monospace;
+:root {
+  --color-principal: rgb(127, 28, 213);
+  --color-1: rgb(41, 41, 41);
+  --color-2: #ebebeb;
+  --fuente-1: 'IBM Plex Mono', monospace;
 }
 
 /* variables de colores y fuentes */
 
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
+
 /* formatear pagina */
 
-body{
-    min-height: 100vh
+body {
+  min-height: 100vh
 }
 
 
 /* comienzo de header */
 
-header{
-    height: 90px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--color-2);
-    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
-    
+header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-2);
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
+
 }
-header h1{
-    color: var(--color-1);
-    font-family: var(--fuente-1);
-    font-size: 40px;
+
+header h1 {
+  color: var(--color-1);
+  font-family: var(--fuente-1);
+  font-size: 40px;
 }
-header p{
-    color: var(--color-principal);
-    font-family: var(--fuente-1);
-    font-size: 20px;
+
+header p {
+  color: var(--color-principal);
+  font-family: var(--fuente-1);
+  font-size: 20px;
 }
 
 /* fin header*/
 
 /* propuesta */
 
-#propuesta{
-    width: 700px;
-  
-    margin: auto;
-    padding: 20px;
-    margin-top: 50px;
-    border:2px solid var(--color-principal);
-    color: var(--color-principal);
-    border-radius: 20px;
+#propuesta {
+  width: 700px;
+
+  margin: auto;
+  padding: 20px;
+  margin-top: 50px;
+  border: 2px solid var(--color-principal);
+  color: var(--color-principal);
+  border-radius: 20px;
 }
-#propuesta h2, .requisitos{
-    display: flex;
-    justify-content: center;
+
+#propuesta h2,
+.requisitos {
+  display: flex;
+  justify-content: center;
 }
 
 
-#propuesta ul{
-    text-align: center;
-    text-decoration: none;
-    list-style: none;
+#propuesta ul {
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
 }
 
 /* fin de propuesta */
@@ -75,90 +79,93 @@ header p{
 
 /* formularios */
 .formularios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
 
-  
-  #product-registration label,
-  #product-movement label,
-  .input-radio {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: row;
-    padding: 10px;
-    font-size: 19px;
-    font-family: var(--fuente-1);
-    color: var(--color-principal);
-  }
-  
 
-  
+
+#product-registration label,
+#product-movement label,
+.input-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 19px;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
+}
+
+
+
 /* formularios */
 
-#product-registration{
-    position: relative;
-    bottom: 325px;
-    height: 500px;
-    border: 1px solid var(--color-principal);
-    border-radius: 20px;
-    margin: 40px;
-    padding: 30px;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
+#product-registration {
+  position: relative;
+  bottom: 325px;
+  height: 500px;
+  border: 1px solid var(--color-principal);
+  border-radius: 20px;
+  margin: 40px;
+  padding: 30px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 
-#product-registration h2{
-    display: flex;
-    margin: auto;
-    font-family: var(--fuente-1);
-    color: var(--color-principal);
+#product-registration h2 {
+  display: flex;
+  margin: auto;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
 }
 
-#product-registration label{
-    
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    padding: 10px;
-    font-size: 19px;
-    font-family: var(--fuente-1);
-     color: var(--color-principal);
-}
-#product-registration input{
-   display: flex;
-margin: auto;
-   height: 30px;
-   width: 200px;
-   border-radius: 11px;
-   border: 1px solid var(--color-principal);
-   outline: none;
-   padding: 5px 5px 5px 5px;
+#product-registration label {
+
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 19px;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
 }
 
-#product-registration input[type="number"]{
-    margin-top: -5px;
+#product-registration input {
+  display: flex;
+  margin: auto;
+  height: 30px;
+  width: 200px;
+  border-radius: 11px;
+  border: 1px solid var(--color-principal);
+  outline: none;
+  padding: 5px 5px 5px 5px;
 }
-#product-registration button{
-    width: 200px;
-    height: 40px;
-    margin-left: 40px;
-    border-radius: 10px;
-    border: 1px solid var(--color-principal);
-    background-color: transparent;
-    transition: .3s;
-    color: var(--color-principal);
+
+#product-registration input[type="number"] {
+  margin-top: -5px;
 }
-#product-registration button:hover{
-    transform: translateY(-10px);
-    background-color: var(--color-principal);
-    transition: .3s;
-    color: var(--color-2);
-    cursor: pointer;
+
+#product-registration button {
+  width: 200px;
+  height: 40px;
+  margin-left: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--color-principal);
+  background-color: transparent;
+  transition: .3s;
+  color: var(--color-principal);
+}
+
+#product-registration button:hover {
+  transform: translateY(-10px);
+  background-color: var(--color-principal);
+  transition: .3s;
+  color: var(--color-2);
+  cursor: pointer;
 }
 
 
@@ -169,247 +176,283 @@ margin: auto;
 /* product - registration*/
 
 
-#product-movement{
-    height: 1250px;
-    
-   padding-right:10px;
-    padding: 10px;
-    font-size: 19px;
-    font-family: var(--fuente-1);
-     color: var(--color-principal);
-    width: 350px;
-    border: 1px solid var(--color-principal);
-    border-radius: 20px;
-    margin: 40px;
-    padding: 30px;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-}
-#product-movement h2{
-    display: flex;
-    margin: auto;
-  font-size: 27px;
-    font-family: var(--fuente-1);
-     color: var(--color-principal);
-    font-family: var(--fuente-1);
-    color: var(--color-principal);
-    
-}
-#product-movement h3{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    font-family: var(--fuente-1);
-    color: var(--color-principal);
-}
+#product-movement {
+  height: 1250px;
 
-#product-movement label{
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    padding: 20px;
-    font-size: 19px;
-    font-family: var(--fuente-1);
-     color: var(--color-principal);
-}
-.input-radio{
-    display: flex;
-    margin: auto;
-    margin-left:15px ;
-    margin-top: 20px;
-    border-top: 1px solid var(--color-principal);
-    border-bottom: 1px solid var(--color-principal);
-    font-family: var(--fuente-1);
-     color: var(--color-principal);
-     accent-color: var(--color-principal);
-}
-.input-radio input[type="radio"]{
-    margin-left: 20px ;
-    padding-top: 10px;
-}
-#product-movement input[type="text"],input[type="date"], input[type="number"]{
-    display: flex;
-margin: auto;
-    height: 30px;
-    width: 200px;
-    border-radius: 11px;
-    border: 1px solid var(--color-principal);
-    outline: none;
-    padding: 5px 5px 5px 5px;
- }
- #product-movement button{
-    width: 200px;
-    height: 40px;
-    margin-left:  76px;
-    margin-top: 50px;
-    border-radius: 10px;
-    border: 1px solid var(--color-principal);
-    background-color: transparent;
-    transition: .3s;
-    color: var(--color-principal);
-}
-#product-movement button:hover{
-
-    transform: translateY(-10px);
-    background-color: var(--color-principal);
-    transition: .3s;
-    color: var(--color-2);
-    cursor: pointer;
-}
-#total, #subtotal, #valor-iva{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* product-container */
-#product-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 850px;
-  height: 300px;
-  background-color: transparent;
-  margin-top: 50px; 
-  margin-left: auto; 
-  margin-right: auto; 
+  padding-right: 10px;
+  padding: 10px;
+  font-size: 19px;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
+  width: 350px;
   border: 1px solid var(--color-principal);
-  border-radius: 30px;
+  border-radius: 20px;
+  margin: 40px;
+  padding: 30px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+#product-movement h2 {
+  display: flex;
+  margin: auto;
+  font-size: 27px;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
+
+}
+
+#product-movement h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: var(--fuente-1);
   color: var(--color-principal);
 }
 
-
-/* Estilos para la tabla */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 10px;  
-}
-th, td {
-
-  text-align: left;
-  padding: 8px;
+#product-movement label {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  padding: 20px;
+  font-size: 19px;
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
 }
 
+.input-radio {
+  display: flex;
+  margin: auto;
+  margin-left: 15px;
+  margin-top: 20px;
+  border-top: 1px solid var(--color-principal);
+  border-bottom: 1px solid var(--color-principal);
+  font-family: var(--fuente-1);
+  color: var(--color-principal);
+  accent-color: var(--color-principal);
+}
+
+.input-radio input[type="radio"] {
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+#product-movement input[type="text"],
+input[type="date"],
+input[type="number"] {
+  display: flex;
+  margin: auto;
+  height: 30px;
+  width: 200px;
+  border-radius: 11px;
+  border: 1px solid var(--color-principal);
+  outline: none;
+  padding: 5px 5px 5px 5px;
+}
+
+#product-movement button {
+  width: 200px;
+  height: 40px;
+  margin-left: 76px;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 1px solid var(--color-principal);
+  background-color: transparent;
+  transition: .3s;
+  color: var(--color-principal);
+}
+
+#product-movement button:hover {
+
+  transform: translateY(-10px);
+  background-color: var(--color-principal);
+  transition: .3s;
+  color: var(--color-2);
+  cursor: pointer;
+}
+
+#total,
+#subtotal,
+#valor-iva {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 
-
-
-/*product container*/
 
 /*footer*/
-footer{
-    position: relative;
+footer {
+  position: relative;
 
-display: flex;
-justify-content: center;
-align-items: center;
-height: 50px;
-background-color: var(--color-2);
-color: var(--color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: var(--color-2);
+  color: var(--color-1);
 }
 
 
 /* responsibe desing */
 
-  @media (max-width: 768px) {
-    body {
-        min-height: 100vh;
-      font-size: 14px;
-      display: grid; 
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    font-size: 14px;
+    display: grid;
     margin: auto;
-}
-      /* Reduce el tamaño de fuente para pantallas más pequeñas */
-    
-  
-    header {
-      height: 80px;
-      width: 100%;
-      margin-bottom: 50px;
-      font-size: 19px;
-    }
-    #propuesta {
-        width: 300px;
-        position: relative;
-        left: 0px; 
-        margin: auto;
-        padding: 20px;
-        font-size: 12px;
-        margin-top: 50px;
-        border:1px solid var(--color-principal);
-        color: var(--color-principal);
-        background-color: var(--color-2);
-        border-radius: 20px;
-    }
-    .formularios{
-display: block;
-    }
-    #product-registration{
-        top: 50px;
-        height: 580px;
-    }
-    #product-registration h2{
-    font-size: 20px;
-    }
-    #product-registration label{
-        margin-top: 20px;
- font-size: 15px;
-    }
-    #product-registration button{
-        position: relative;
-        right: 24px;
-    }
+  }
 
-  #product-container{
+  /* Reduce el tamaño de fuente para pantallas más pequeñas */
+
+
+  header {
+    height: 80px;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 19px;
+  }
+
+  #propuesta {
+    width: 300px;
+    position: relative;
+    left: 0px;
+    margin: auto;
+    padding: 20px;
+    font-size: 12px;
+    margin-top: 50px;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+    background-color: var(--color-2);
+    border-radius: 20px;
+  }
+
+  .formularios {
+    display: block;
+  }
+
+  #product-registration {
+    top: 50px;
+    height: 580px;
+  }
+
+  #product-registration h2 {
+    font-size: 20px;
+  }
+
+  #product-registration label {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  #product-registration button {
+    position: relative;
+    right: 24px;
+  }
+
+  #product-container {
     left: 0;
     bottom: 1200px;
-  margin: auto;
-  width: 260px;
-  } 
+    margin: auto;
+    width: 260px;
+  }
 
 
-   #product-movement{
+  #product-movement {
     width: 240px;
     height: 1200px;
     position: relative;
     top: 500px;
   }
-  #product-movement h2{
+
+  #product-movement h2 {
+    color: var(--color-1);
     font-size: 18px;
   }
-  #product-movement h3{
+
+  #product-movement h3 {
     font-size: 16px;
   }
-  .input-radio{
+
+  .input-radio {
     width: 200px;
     position: relative;
     right: 10px;
-    
+
   }
+
   /* Estilo para los inputs de tipo radio dentro del contenedor .input-radio */
-  .input-radio input[type="radio"]{
+  .input-radio input[type="radio"] {
     padding: 10px;
   }
-  .input-radio label{
+
+  .input-radio label {
     width: 20px;
     transform: scale(0.8);
-    }
+  }
 
-    #product-movement button{
-      display: flex;
-      margin: auto;
-      align-items: center;
-      justify-content: center;
-    }
-  footer{
+  #product-movement button {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
     width: 100%;
     height: 20px;
-top: 200px;
-bottom: 0;
+    top: 200px;
+    bottom: 0;
 
   }
-    /* Ajustes de estilo adicionales para pantallas pequeñas */
-  }
-  
-  /* Footer */
 
-  
+  /* Ajustes de estilo adicionales para pantallas pequeñas */
+}
+
+/* Estilos para la tabla */
+/* product-container */
+#product-container {
+
+  grid-template-columns: 1fr;
+  width: 850px;
+  height: 300px;
+  background-color: transparent;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--color-principal);
+  border-radius: 30px;
+  color: var(--color-principal);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+.table-header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
+
+}
+
+.table-header h1 {
+  color: var(--color-1);
+  font-family: var(--fuente-1);
+  font-size: 40px;
+}
