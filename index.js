@@ -129,6 +129,7 @@ function agregarMovimiento() {
     document.getElementById('subtotal').innerText = '';
     document.getElementById('valor-iva').innerText = '';
     document.getElementById('total').innerText = '';
+    verificarStock()
 }
 
 // Función para calcular el subtotal
