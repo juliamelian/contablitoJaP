@@ -1,5 +1,18 @@
 // Declaración de objetos para el registro de productos y movimientos
-const productos = [];
+const productos = [{
+    id: 1,
+    nombre: "Bloque",
+    descripcion: "Medida: 40x20x12 Peso: 1,5kg",
+    cantidad: 5700,
+    costoUnitario: 25,
+},
+{
+    id: 2,
+    nombre: "Ticholo",
+    descripcion: "Medida: 25x25x12 Peso: 0.9kg",
+    cantidad: 15600,
+    costoUnitario: 30,
+}];
 const movimientos = [];
 
 // Función para agregar productos a la tabla y al registro de productos
@@ -43,6 +56,28 @@ function agregarAlListado() {
     document.getElementById('registration-form-cost').value = '';
 }
 
+// Obtener una referencia al campo de nombre
+const nombreProductoInput = document.getElementById('movement-form-product');
+
+nombreProductoInput.addEventListener('input', function () {
+
+    // Obtener el valor actual del campo de nombre
+    const productoNombre = nombreProductoInput.value.toLowerCase();
+
+    // Buscar el producto en el registro de productos por su nombre
+    const producto = productos.find((p) => p.nombre.toLowerCase() === productoNombre);
+
+    // Si se encuentra el producto, establecer el costo unitario en el campo de costo
+    if (producto) {
+        document.getElementById('movement-form-cost').value = producto.costoUnitario;
+    } else {
+        // Si el producto no se encuentra, puedes limpiar el campo de costo
+        document.getElementById('movement-form-cost').value = '';
+    }
+});
+
+
+
 // Función para agregar movimientos a la tabla y al registro de movimientos
 function agregarMovimiento() {
     const tipoTransaccion = document.querySelector('input[name="input-tipo-transaccion"]:checked').value;
@@ -51,8 +86,8 @@ function agregarMovimiento() {
     const cantidad = parseFloat(document.getElementById('movement-form-quantity').value);
     const costoUnitario = parseFloat(document.getElementById('movement-form-cost').value);
 
-    // Buscar el producto en el registro de productos por su nombre
-    const producto = productos.find((p) => p.nombre == productoNombre);
+    // Buscar el producto en el registro de productos por su nombre 
+    const producto = productos.find((p) => p.nombre.toLowerCase() === productoNombre.toLowerCase() );
 
     if (!producto) {
         alert('El producto no existe en el registro.');
@@ -76,8 +111,8 @@ function agregarMovimiento() {
     if (tipoTransaccion === 'compra') {
         producto.cantidad += cantidad;
 
-         // Actualizar la cantidad en la tabla de productos
-         for (let i = 0; i < tableRows.length; i++) {
+        // Actualizar la cantidad en la tabla de productos
+        for (let i = 0; i < tableRows.length; i++) {
             const row = tableRows[i];
             const nombreCell = row.cells[1];
             const quantityCell = row.cells[3];

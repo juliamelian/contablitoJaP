@@ -423,11 +423,11 @@ footer {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  /*overflow-y: auto;   agregar scroll */ 
   border: 1px solid var(--color-principal);
   border-radius: 30px;
   color: var(--color-principal);
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
