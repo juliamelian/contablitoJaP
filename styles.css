@@ -1,6 +1,6 @@
 :root {
-  --color-principal: rgb(213, 105, 28);
-  --color-1: rgb(41, 41, 41);
+  --color-principal: #d5691c;
+  --color-1: #292929;
   --color-2: #ebebeb;
   --fuente-1: 'IBM Plex Mono', monospace;
 }
@@ -298,7 +298,7 @@ footer {
 
 @media (max-width: 768px) {
   body {
-    min-height: 100vh;
+    
     font-size: 14px;
     display: grid;
     margin: auto;
@@ -306,12 +306,12 @@ footer {
 
   /* Reduce el tamaño de fuente para pantallas más pequeñas */
 
-
-  .navbar{
-    height: 80px;
-    width: 100%;
-    margin-bottom: 50px;
-    font-size: 19px;
+ nav.navbar{
+  display: none;
+}
+  .navbar-links, a {
+   background-color: none;
+    display: none;
   }
 
   #propuesta {
@@ -335,8 +335,10 @@ footer {
   #product-registration {
     width: 240px;
     height: 35rem;
+     margin: 50px;
+     
     position: relative;
-    top: 500px;
+    top: 100px;
   }
 
   #product-registration h2 {
@@ -354,18 +356,41 @@ footer {
   }
 
   #product-container {
-    width: 240px;
-    height:70rem;
-    position: relative;
-    top: 500px;
+    width: 100%;
+    height:20rem;
+   
+   padding-bottom: 500px;
+  position: relative;
+  top: 50vw;
   }
+  #tabla-stock{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    margin: auto;
+  }
+   #table-h1{
+    width: 70vw;
 
-
+margin: auto;
+font-size: 15px;
+  }
+ 
+ td, th{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 50px;
+ }
+ #tabla-stock{
+height:40px ;
+ }
   #product-movement {
+    width:64vw;
     width: 240px;
-    height:70rem;
+    margin:auto ;
     position: relative;
-    top: 500px;
+    top: 100px;
   }
 
   #product-movement h2 {
@@ -403,50 +428,29 @@ footer {
 
   footer {
     width: 100%;
-    height: 20px;
-    top: 200px;
+    height: -300ppx;
+    top: 600px;
     bottom: 0;
 
   }
-  #product-container{
-display: block;
-align-items: center;
-flex-direction: row;
   
-  }
-  
-  /* Ajustes de estilo adicionales para pantallas pequeñas */
-}
-
-/* Diseño para celulares */
-#columna1, #columna2, #columna3 {
+ #columna1, #columna2, #columna3 {
 	float:none;
 	width:100%;
 }
 
-/* Diseño para tabletas */ 
-@media screen and (min-width: 800px) {
-	#columna1, #columna2 {
-		float:left;
-		width:50%;
-	}
+ /* Ajustes de estilo adicionales para pantallas pequeñas */
 }
 
-/* Diseño para PC */ 
-@media screen and (min-width: 1025px) {
-	#columna1, #columna2, #columna3 {
-	float:left;
-	width:33%;
-  color: var(--color-principal);
-}
-}
+/* Diseño para celulares */
+
 
 /* Estilos para la tabla */
 /* product-container */
 #product-container {
   
   grid-template-columns: 1fr;
-  width: 480px;
+  width: 70vw;
   height: 300px;
   background-color: transparent;
   margin-top: 50px;
@@ -458,7 +462,7 @@ flex-direction: row;
   color: var(--color-principal);
 }
 table {
-  width: 50%;
+  width: 100%;
   border-collapse: collapse;
   margin: 10px;
 }
@@ -475,18 +479,20 @@ td {
 }
 
 .table-header {
-  height: 35px;
-  width: 100%;
+  height: 45px;
+  width: 715px;
   display: flex;
   justify-content: center;
   align-items: center;
+ margin-bottom: 3px;
   border-radius: 30px;
-  background-color: var(--color-2);
-  color: var(--color-1);
-  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.64);
+border: 1px solid var(--color-principal);
+  background-color: var(--color-3);
+  color: var(--color-principal);
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.354);
   font-family: var(--fuente-1);
   font-size: 1.4rem;
-  font-weight: 550;
+  
 
 }
 
