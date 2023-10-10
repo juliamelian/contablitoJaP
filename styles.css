@@ -1,5 +1,5 @@
 :root {
-  --color-principal: rgb(127, 28, 213);
+  --color-principal: rgb(213, 105, 28);
   --color-1: rgb(41, 41, 41);
   --color-2: #ebebeb;
   --fuente-1: 'IBM Plex Mono', monospace;
@@ -307,7 +307,7 @@ footer {
   /* Reduce el tamaño de fuente para pantallas más pequeñas */
 
 
-  header {
+  .navbar{
     height: 80px;
     width: 100%;
     margin-bottom: 50px;
@@ -333,8 +333,10 @@ footer {
   }
 
   #product-registration {
-    top: 50px;
-    height: 580px;
+    width: 240px;
+    height: 35rem;
+    position: relative;
+    top: 500px;
   }
 
   #product-registration h2 {
@@ -352,22 +354,22 @@ footer {
   }
 
   #product-container {
-    left: 0;
-    bottom: 1200px;
-    margin: auto;
-    width: 260px;
+    width: 240px;
+    height:70rem;
+    position: relative;
+    top: 500px;
   }
 
 
   #product-movement {
     width: 240px;
-    height: 1200px;
+    height:70rem;
     position: relative;
     top: 500px;
   }
 
   #product-movement h2 {
-    color: var(--color-1);
+    color: var(--color-principal);
     font-size: 18px;
   }
 
@@ -406,8 +408,37 @@ footer {
     bottom: 0;
 
   }
-
+  #product-container{
+display: block;
+align-items: center;
+flex-direction: row;
+  
+  }
+  
   /* Ajustes de estilo adicionales para pantallas pequeñas */
+}
+
+/* Diseño para celulares */
+#columna1, #columna2, #columna3 {
+	float:none;
+	width:100%;
+}
+
+/* Diseño para tabletas */ 
+@media screen and (min-width: 800px) {
+	#columna1, #columna2 {
+		float:left;
+		width:50%;
+	}
+}
+
+/* Diseño para PC */ 
+@media screen and (min-width: 1025px) {
+	#columna1, #columna2, #columna3 {
+	float:left;
+	width:33%;
+  color: var(--color-principal);
+}
 }
 
 /* Estilos para la tabla */
@@ -459,7 +490,7 @@ td {
   position: sticky;
   top: 0; /* La posición en la que se volverá "sticky" (en la parte superior) */
   z-index: 100; /* Asegura que esté por encima de otros elementos */
-  height: 3rem;
+  height:70px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -475,20 +506,32 @@ td {
   margin: 0;
   padding: 0;
   display: flex;
+  margin-left: 60px;
 }
 
 .navbar-links li {
   margin-right: 20px;
+
+  text-decoration: none;
+  
 }
 
 .navbar-links a {
-  color: var(--color-principal);
+  color: var(--color-1);
+  list-style: none;
+  font-size: 20px;
   text-decoration: none;
   font-weight: 550;
+  transition: .3s;
   
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
+
+ border-bottom: 3px solid var(--color-principal);
+padding: 10px;
+ 
+  color: var(--color-principal);
+  transition: .3s;
 }
 
