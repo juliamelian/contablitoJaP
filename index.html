@@ -133,11 +133,11 @@
             <thead>
                 <tr><h1 class="table-header">Productos en Stock</h1></tr>
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Cantidad</th>
-                    <th>Costo Unitario</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Costo Unitario</th>
                 </tr>
             </thead>
             <tbody id="product-table-body">
@@ -166,16 +166,17 @@
         <table id="tabla-movs">
             <thead>
                 <tr><h1 class="table-header">Registro de Movimientos</h1></tr>
+            <thead>
                 <tr>
-                    <th>Tipo</th>
-                    <th>Fecha</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Costo Unitario</th>
-                    <th>Valor IVA</th>
-                    <th>Total</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Costo Unitario</th>
+                  <th scope="col">Valor IVA</th>
+                  <th scope="col">Total</th>
                 </tr>
-            </thead>
+              </thead>
             <tbody id="product-table-body-movs">
                 <!-- Las filas de la tabla se agregarán aquí -->
             </tbody>

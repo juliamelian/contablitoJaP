@@ -444,9 +444,9 @@ flex-direction: row;
 /* Estilos para la tabla */
 /* product-container */
 #product-container {
-
+  
   grid-template-columns: 1fr;
-  width: 850px;
+  width: 480px;
   height: 300px;
   background-color: transparent;
   margin-top: 50px;
@@ -458,17 +458,24 @@ flex-direction: row;
   color: var(--color-principal);
 }
 table {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse;
   margin: 10px;
 }
 th,
 td {
-  text-align: left;
-  padding: 8px;
+  text-align: center;
+  padding: 9px;
 }
+
+.tbody{
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+
 .table-header {
-  height: 60px;
+  height: 35px;
   width: 100%;
   display: flex;
   justify-content: center;
